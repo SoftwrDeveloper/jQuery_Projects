@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>jQuery Handling Events Application</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+            $(document).ready(function() {
+                $("div").bind("click the button: ", function( event ) {
+                    alert("This event exercise: " + event.type);
+                });
+            });
+        </script>
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function() {
+                 $( "p" ).click(function() {
+                    $( this ).hide();
+                });
+            });
+       </script>
+       <script type="text/javascript" language="javascript">
+           $(document).ready(function() {
+               $( "h2" ).click(function() {
+                $( this ).slideUp();
+           });
+        });
+    </script>
+    <style>
+        h2, p {
+            background-color: #ff00ff;
+            binding: 10px;border: 20px;}
+        div {background: #00ff00;font-size: 30px;}
+    </style>     
+</head>
+<body>
+    <div>Thanks for watching VIDEO EDIT channel.</div>
+    <h2>Hey, YouTubers!</h2>
+    <h2>Welcome to video edit channel.</h2>
+<p><img src="LOGO2.png"><img src="LOGO2.png"></p>
+    </body>
+</html>
