@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery AJAX Application</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".loadButt").click(function() {
+                    $("#container1").load("webpage.html")
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(document).ajaxStart(function() {
+                    $("#container2").show();
+                });
+                $(".startButt").click(function() {
+                    $("#container2").load("load_txt.asp");
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(document).ajaxSuccess(function() {
+                    alert("Successfly managed to get External text file!");
+                });
+                $(".successButt").click(function() {
+                   $("#container3").load("demo_text.txt");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="container1"><h2>Use jQuery AJAX Load Method to load An External HTML Page</h2></div>
+        <button class="loadButt">Press Button</button>
+       
+        <div id="container2"><h2>Use jQuery AJAX Start Method to start an external text.asp</h2></div>
+        <button class="startButt">Press Button</button>
+       
+        <div id="container3"><h2>Use jQuery AJAX Success Method to get External text file</h2></div>
+        <button class="successButt">Press Button</button>
+   
+    </body>
+</html>
+
+The webpage.html Web Page: 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery AJAX Application</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
+       
+        <style>
+.rectContainer1{ margin: 1px; padding: 20px; border: 40px solid #c0c00c; width: 200px; height:110px; }
+</style>
+       
+    </head>
+    <body>
+        <h2>Two Rectangles..</h2>
+        <div class="rectContainer1"><h2>Rectangle 1</h2></div>
+        <button class="hideButt">Press To Hide</button>
+        <button class="showButt">Press To Show</button> 
+    </body>
+</html>
+
+The load_txt.asp Text file:
+
+<h2>
+Hello and welcome to VIDEO EDIT channel.</h2>
+<h2>Part of jQuery AJAX where we look at:</h2>
+<h2>Some methods that are used.....</h2>
+<br>
+
+The demo_text.txt Test file:
+
+Let see what happens when jQuery AJAX load a text externally...
+
+using the jQuery AJAX Methods...
