@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery DOM Traversing Application</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function() {
+                $("div").find(".title").addClass("selected");
+                $("div").find(".title").addClass("hilight");
+                $("div").find("img").addClass("selected"); 
+                $("div").next(".subcont").addClass("hilight");
+                $("div").siblings(".title").addClass("hilight");
+                $("div").prevAll().addClass("hilight");
+                $("div").filter(".subcont").addClass("selected");
+            });
+        </script>
+        <style>
+            .selected { color: #ff00ff; }
+            .hilight { background-color: #c0c0c0; }
+            .selected { width: 260px; height: 260px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="photo">
+                <img src="LOGO2.png"></div>
+            <div class="title">
+                <h2>DOM Traversing Excercise!</h2></div>
+            <div class="subcont">
+                <p>Some examples of DOM traversing methods.</p>
+                <p>Some examples of DOM traversing methods.</p>
+                <p>Some examples of DOM traversing methods.</p>
+            </div>
+        </div>
+    </body>
+</html>
