@@ -1,0 +1,88 @@
+
+wrapAll Method code:
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery DOM Manipulation Application</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
+        <script language="javascript">
+            $(document).ready(function(){
+            $("button").click(function(){
+            $("p").wrapAll("<div></div>");
+            });
+});
+        </script>
+        <style>
+            div { background-color: aqua;font-size: 28px; text-align: center;}
+        </style>
+    </head>
+    <body>
+        <p>First wrapall sentence paragraph.</p>
+        <p>Second wrapall sentence paragraph</p>
+        <button>Press Button</button>
+    </body>
+</html>
+
+replaceAll Method code:
+
+<script language="javascript">
+            $(document).ready(function() {
+                $("button").click(function(){
+               $( "<h1>The three sentences now same</h1>" ).replaceAll( ".text" );
+                });
+            })
+        </script>
+<body>
+<div class="main">
+        <div class="text first">The first sentence</div>
+        <div class="text second">The second sentence</div>
+        <div class="text third">The third sentence</div>
+        </div>
+        <button id="pressButt">Press Button</button>
+</body>
+
+remove Method code:
+
+<script language="javascript">
+            $(document).ready(function() {
+                $("button").click(function(){
+                $( ".hello" ).remove();
+                });
+            });
+        </script>
+<body>
+<div class="container">
+            <div class="hello">
+                <h2>Part 1 image to be removed</h2><br>
+                <img src="youtube.png" style="width:200px;height:200px;">
+                </div>
+            <div class="goodbye">
+              <h2>Part 2 image to be kept</h2><br>
+                <img src="youtube.png" style="width:200px;height:200px;"> 
+                </div>
+                </div><br>
+                <button id="division">Press Button</button>
+</body> 
+
+insertAfter Method code:
+
+<script language="javascript">
+            $(document).ready(function() {
+                $("button").click(function(){
+                $( "<div></div>" ).insertAfter( ".inner" );
+                });
+            })
+        </script>
+  <style>
+            div { background-color: aqua;font-size: 28px; text-align: center;}
+        </style>
+<body>
+<div class="container">
+        <h2>Hello YouTubers!!</h2>
+        <div class="outer">The front</div>
+        <div class="inner">Hello There</div>
+        <div class="inner">Insert After</div>
+        <div class="outer">The After</div>
+        </div>
+</body>
