@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Effects Application</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $(".hideButt").click(function() {
+                $(".rectContainer1").hide();
+            });
+            $(".showButt").click(function() {
+                $(".rectContainer1").show();
+            });
+        });
+        </script>
+        <script>
+        $(document).ready(function() {
+            $(".slideUp").click(function() {
+                $(".rectContainer2").slideUp();
+            });
+            $(".slideDown").click(function() {
+                $(".rectContainer2").slideDown();
+            });
+        });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $(".reset").click(function() {
+                    $(".rectContainer3").animate({height: "110px"});
+                });
+                $(".animate").click(function() {
+                    $(".rectContainer3").animate({height: "290px"});
+                });
+            });
+        </script>
+        <style>
+            .rectContainer1{ margin: 1px; padding: 20px; border: 5px solid #c0c00c; width: 200px; height:110px; }
+            .rectContainer2{ margin: 1px; padding: 20px; border: 5px solid #c0c0c0; width: 200px; height:110px; }
+            .rectContainer3{ margin: 1px; padding: 20px; border: 5px solid #ff00ff; width: 200px; height:110px; }
+        </style>
+    </head>
+    <body>
+        <div class="rectContainer1"><h2>Rectangle 1</h2></div>
+        <button class="hideButt">Press To Hide</button>
+        <button class="showButt">Press To Show</button>
+        <br>
+        <div class="rectContainer2"><h2>Rectangle 2</h2></div>
+        <button class="slideUp">Press SlideUp</button>
+        <button class="slideDown">Press SlideDown</button>
+       
+        <div class="rectContainer3"><h2>Rectangle 3</h2></div>
+        <button class="reset">Press Reset</button>
+        <button class="animate">Press Animate</button>
+    </body>
+</html>
