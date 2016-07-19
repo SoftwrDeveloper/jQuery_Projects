@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Selectors Application</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function() {
+                $(".example1").css({"width": "500px", "height": "350px", "position": "left", "z-index": "1"});
+                $(".example1").css({"background-color": "#c0c0c0", "font-size": "200%", "color": "#660066"});
+                $(".example1").css("background-image", "url(http://www.online-image-editor.com//styles/2014/images/example_image.png)");
+            });
+        </script>
+   
+    </head>
+    <body>
+        <div class="example1" id="div1">
+            <p>Welcome to jQuery tutorial!</p>
+            <p>You can add CSS styling to HTML.</p>
+            <p>Insert background image, and more.</p>
+        </div>
+    </body>  
+<html>
